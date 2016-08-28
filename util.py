@@ -55,21 +55,23 @@ def find_points_of_interest(geotag, location):
     near_bart = False
     bart_dist = "N/A"
     bart = ""
-    # Look to see if the listing is in any of the neighborhood boxes we defined.
-    for a, coords in settings.BOXES.items():
-        if in_box(geotag, coords):
-            area = a
-            area_found = True
 
-    # Check to see if the listing is near any transit stations.
-    for station, coords in settings.TRANSIT_STATIONS.items():
-        dist = coord_distance(coords[0], coords[1], geotag[0], geotag[1])
-        if (min_dist is None or dist < min_dist) and dist < settings.MAX_TRANSIT_DIST:
-            bart = station
-            near_bart = True
+    if geotag is not None:
+        # Look to see if the listing is in any of the neighborhood boxes we defined.
+        for a, coords in settings.BOXES.items():
+            if in_box(geotag, coords):
+                area = a
+                area_found = True
 
-        if (min_dist is None or dist < min_dist):
-            bart_dist = dist
+        # Check to see if the listing is near any transit stations.
+        for station, coords in settings.TRANSIT_STATIONS.items():
+            dist = coord_distance(coords[0], coords[1], geotag[0], geotag[1])
+            if (min_dist is None or dist < min_dist) and dist < settings.MAX_TRANSIT_DIST:
+                bart = station
+                near_bart = True
+
+            if (min_dist is None or dist < min_dist):
+                bart_dist = dist
 
     # If the listing isn't in any of the boxes we defined, check to see if the string description of the neighborhood
     # matches anything in our list of neighborhoods.

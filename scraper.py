@@ -71,12 +71,9 @@ def scrape_area(area):
                 lat = result["geotag"][0]
                 lon = result["geotag"][1]
 
-                # Annotate the result with information about the area it's in and points of interest near it.
-                geo_data = find_points_of_interest(result["geotag"], result["where"])
-                result.update(geo_data)
-            else:
-                result["area"] = ""
-                result["bart"] = ""
+            # Annotate the result with information about the area it's in and points of interest near it.
+            geo_data = find_points_of_interest(result["geotag"], result["where"])
+            result.update(geo_data)
 
             # Try parsing the price.
             price = 0
