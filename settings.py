@@ -24,6 +24,7 @@ AREAS = ["eby", "sfc", "sby", "nby"]
 # attached will be checked to see which area it is in.  If there's a match, it will be annotated with the area
 # name.  If no match, the neighborhood field, which is a string, will be checked to see if it matches
 # anything in NEIGHBORHOODS.
+# Format for theses boxes is: ["your box name": [<bottom right lat>, <bottom right long>], [<top left lat>, <top left long>]]
 BOXES = {
     "adams_point": [
         [37.80789, -122.25000],
