@@ -110,6 +110,9 @@ SLEEP_INTERVAL = 20 * 60 # 20 minutes
 # Which slack channel to post the listings into.
 SLACK_CHANNEL = "#housing"
 
+# Which slack username to use to post
+SLACK_USER = "pybot"
+
 # The token that allows us to connect to slack.
 # Should be put in private.py, or set as an environment variable.
 SLACK_TOKEN = os.getenv('SLACK_TOKEN', "")
