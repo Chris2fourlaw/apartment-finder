@@ -13,7 +13,7 @@ Settings
 Look in `settings.py` for a full list of all the configuration options.  Here's a high level overview:
 
 * `MIN_PRICE` -- the minimum listing price you want to search for.
-* `MAX_PRICE` -- the minimum listing price you want to search for.
+* `MAX_PRICE` -- the maximum listing price you want to search for.
 * `CRAIGSLIST_SITE` -- the regional Craigslist site you want to search in.
 * `AREAS` -- a list of areas of the regional Craiglist site that you want to search in.
 * `BOXES` -- coordinate boxes of the neighborhoods you want to look in.
