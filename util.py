@@ -22,7 +22,7 @@ def in_box(coords, box):
     """
     Find if a coordinate tuple is inside a bounding box.
     :param coords: Tuple containing latitude and longitude.
-    :param box: Two tuples, where first is the bottom left, and the second is the top right of the box.
+    :param box: Two tuples, where first is the bottom right, and the second is the top left of the box.
     :return: Boolean indicating if the coordinates are in the box.
     """
     if box[0][0] < coords[0] < box[1][0] and box[1][1] < coords[1] < box[0][1]:
