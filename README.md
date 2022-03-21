@@ -15,11 +15,8 @@ Look in `settings.py` for a full list of all the configuration options.  Here's 
 * `MIN_PRICE` -- the minimum listing price you want to search for.
 * `MAX_PRICE` -- the maximum listing price you want to search for.
 * `CRAIGSLIST_SITE` -- the regional Craigslist site you want to search in.
-* `AREAS` -- a list of areas of the regional Craiglist site that you want to search in.
-* `BOXES` -- coordinate boxes of the neighborhoods you want to look in.
-* `NEIGHBORHOODS` -- if the listing doesn't have coordinates, a list of neighborhoods to match on.
 * `MAX_TRANSIT_DISTANCE` -- the farthest you want to be from a transit station.
-* `TRANSIT_STATIONS` -- the coordinates of transit stations.
+* `POI_LOCATIONS` -- the coordinates of POIs.
 * `CRAIGSLIST_HOUSING_SECTION` -- the subsection of Craigslist housing that you want to look in.
 * `SLACK_CHANNEL` -- the Slack channel you want the bot to post in.
 
@@ -44,7 +41,6 @@ Configuration
     * If you don't want to look in the Bay Area, you'll need to update the following settings at the minimum:
         * `CRAIGSLIST_SITE`
         * `AREAS`
-        * `BOXES`
         * `NEIGHBORHOODS`
         * `TRANSIT_STATIONS`
         * `CRAIGSLIST_HOUSING_SECTION`
