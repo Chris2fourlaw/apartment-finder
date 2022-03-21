@@ -8,6 +8,10 @@ MIN_PRICE = 1500
 # The maximum rent you want to pay per month.
 MAX_PRICE = 2000
 
+# The minimum and maximum number of bedrooms you want.
+MIN_BEDROOMS = 1
+MAX_BEDROOMS = 4
+
 ## Location preferences
 
 # The Craigslist site you want to search on.
